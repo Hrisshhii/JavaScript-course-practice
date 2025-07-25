@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ROCK PAPER SCISSORS</title>
+  </head>
+  <body>
+    <p> ROCK PAPER SCISSORS</p>
+    <button onclick="
+    randomNum=Math.random();
+        if(randomNum>=0 && randomNum<1/3){
+            moveCom='ROCK';
+        }
+        else if(randomNum>=1/3 && randomNum<2/3){
+            moveCom='PAPER';
+        }
+        else{
+            moveCom='SCISSORS';
+        }
+
+        if(moveCom==='ROCK'){
+            result='DRAW';
+        }
+        else if(moveCom==='PAPER'){
+            result='YOU LOSE!!';
+        }
+        else{
+            result='YOU WIN!!';
+        }
+
+        alert(`YOUR MOVE ROCK!! COMPUTER MOVE: ${moveCom}. ${result}`);
+    ">
+        ROCK
+    </button>
+
+    <button onclick="
+    randomNum=Math.random();
+        if(randomNum>=0 && randomNum<1/3){
+            moveCom='ROCK';
+        }
+        else if(randomNum>=1/3 && randomNum<2/3){
+            moveCom='PAPER';
+        }
+        else{
+            moveCom='SCISSORS';
+        }
+
+        if(moveCom==='ROCK'){
+            result='YOU WIN!!';
+        }
+        else if(moveCom==='PAPER'){
+            result='DRAW';
+        }
+        else{
+            result='YOU LOSE!!';
+        }
+
+        alert(`YOUR MOVE PAPER!! COMPUTER MOVE: ${moveCom}. ${result}`);
+    ">
+        PAPER
+    </button>
+
+    <button onclick="
+    randomNum=Math.random();
+        if(randomNum>=0 && randomNum<1/3){
+            moveCom='ROCK';
+        }
+        else if(randomNum>=1/3 && randomNum<2/3){
+            moveCom='PAPER';
+        }
+        else{
+            moveCom='SCISSORS';
+        }
+
+        if(moveCom==='ROCK'){
+            result='YOU LOSE!!';
+        }
+        else if(moveCom==='PAPER'){
+            result='YOU WIN!!';
+        }
+        else{
+            result='DRAW';
+        }
+
+        alert(`YOUR MOVE SCISSORS!! COMPUTER MOVE: ${moveCom}. ${result}`);
+    ">
+        SCISSORS
+    </button>
+    <script>
+        let result='';
+        let moveCom='';
+        let randomNum='';
+    </script>
+  </body>
+</html>

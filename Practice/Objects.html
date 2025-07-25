@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+        const product={
+            name: 'SOCKS',
+            price: '1000'
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name='COTTON SOCKS';
+        console.log(product);
+
+        product.newProp=true;
+        console.log(product);
+
+        delete product.newProp;
+        console.log(product);
+
+        console.log(typeof product);
+
+        const product2={
+            name:'SHIRT',
+            'Delivery-time':'1 Day',
+            rating:{
+                stars:4.5,
+                Count:85
+            },
+            fun: function function1(){
+                console.log('FUNCTION INSIDE AN OBJECT!!');
+            }
+        };
+        console.log(product2);
+        console.log(product2['name']);
+        console.log(product2['Delivery-time']);
+        console.log(product2.rating);
+        console.log(product2.rating.Count);
+        console.log(product2.rating['stars']);
+
+        product2.fun();
+
+        console.log(typeof console);
+        console.log(typeof console.log);
+
+        console.log(JSON.stringify(product2));
+        console.log(typeof JSON.stringify(product2));
+
+        const jsonstring=JSON.stringify(product2);
+        console.log(JSON.parse(jsonstring));
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1={
+            message:'FEIN'
+        };
+        const object2=object1;
+        console.log(object1);
+        console.log(object2);
+
+        object2.message='NAAAAH';
+        console.log(object1);
+        console.log(object2);
+
+        const object3={
+            message:'SUNFLOWER'
+        };
+
+        console.log(object1===object3);
+        console.log(object1===object2);
+
+
+        const object4={
+            message:'SUNFLOWER',price:799
+        };
+        //const message=object4.message;
+        const {message,price}=object4;
+        console.log(message);
+        console.log(price);
+
+        const object5={
+            //message:message
+            message,
+            /*method: function f1(){
+                console.log('METHOD');
+            }*/
+            method(){
+                console.log('METHODS');
+            }
+        };
+        console.log(object5);
+        object5.method();
+
+    </script>
+  </body>
+</html>

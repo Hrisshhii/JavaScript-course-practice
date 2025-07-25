@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(25,25,25);
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.mov-but{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    margin: 10px;
+}
+.mov-but:hover{
+    cursor: pointer;
+}
+
+.mov-icon{
+    height:50px;
+}
+
+.res{
+    font-size: 25px;
+    margin: 10px;
+}
+
+.score{
+    margin-top: 60px;
+}
+
+.reset-but, .auto-button{
+    background-color: white;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}

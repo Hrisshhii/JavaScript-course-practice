@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p style="color: orange;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size:larger;
+      ">
+      Cart quantity
+    </p>
+    <button onclick="
+      console.log(`Cart Quantity: ${quantity}`);
+    "
+    style="display:block; margin-bottom: 25px;">
+      Show Quantity
+    </button>
+    <button onclick="
+    quantity++;
+    console.log(`Cart Quantity: ${quantity}`);
+    "
+    style="display:block; margin-bottom: 25px;">
+      Add to Cart
+    </button>
+    <button onclick="
+    quantity+=2;
+    console.log(`Cart Quantity: ${quantity}`);
+    "
+    style="display:block; margin-bottom: 25px;">
+      +2
+    </button>
+    <button onclick="
+    quantity+=5;
+    console.log(`Cart Quantity: ${quantity}`);
+    "
+    style="display:block; margin-bottom: 25px;">
+      +5
+    </button>
+    <button onclick="
+    quantity=0;
+    console.log('CART RESET!!');
+    "
+    style="display:block; margin-bottom: 25px;">
+      Reset Cart
+    </button>
+    <script>
+      let quantity=0;
+
+    </script>
+  </body>
+</html>

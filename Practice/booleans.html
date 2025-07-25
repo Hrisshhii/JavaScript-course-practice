@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+
+    <script>
+        console.log(typeof true);
+
+        console.log(3>5);
+        console.log(3<5);
+
+
+        console.log(5=='5');
+        console.log(5==='5');
+
+        console.log(5!=5);
+        console.log('5'!==5);
+
+        if(true){
+            console.log('HELLO');
+        }
+        if(false){
+            console.log('HELLO');
+        }
+        else{
+            console.log('Else')
+        }
+
+        const age=15;
+        if(30>=18){
+            console.log('CAN DRIVE!!');
+        }
+        else{
+            console.log('UNDER-AGE!!!!!!');
+        }
+
+        if(age>=18){
+            console.log('CAN DRIVE!!');
+        }
+        else if(age>=14){
+            console.log('Almost There!!!!!!');
+        }
+        else{
+            console.log('UNDER-AGE!!!!!!');
+        }
+        //Logical AND
+        console.log(true && true);
+        console.log(true && false);
+        //Logical OR
+        console.log(true || true);
+        console.log(true || false);
+        console.log(false || false);
+        //Logical NOT
+        console.log(!true);
+
+        console.log('Text'/5); //Returns NaN 
+        let VAR;
+        console.log(VAR); //Returns Undefined
+
+        const result=true ? 'truthy':'falsy';
+        console.log(result);
+
+        const res=0 ? 'truthy':'falsy';
+        console.log(res);
+
+        const msg1=false&&'HEllO';
+        console.log(msg1);
+
+        const msg2=true&&'HEllO';
+        console.log(msg2);
+
+        const currency='EUR'||'USD';
+        console.log(currency);
+
+        const curr=undefined||'USD';//can be used to set default value
+        console.log(curr);
+    </script>
+  </body>
+</html>

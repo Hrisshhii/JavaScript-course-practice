@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM RPS</title>
+    <link rel="stylesheet" href="Styles/10-rps.css">
+  </head>
+  <body>
+    <p>ROCK PAPER SCISSORS</p>
+    <button class="mov-but" onclick="
+        playGame('ROCK');
+        ">
+        <img src="Images/ROCK.png" class="mov-icon">
+    </button>
+    <button class="mov-but" onclick="
+        playGame('PAPER');
+        ">
+        <img src="Images/PAPER.png" class="mov-icon">
+    </button>
+    <button class="mov-but" onclick="
+        playGame('SCISSORS');
+    ">
+        <img src="Images/SCISSORS.png" class="mov-icon">
+    </button>
+    <p class="js-result res"></p>
+    <p class="js-moves score"></p>
+    <p class="js-score"></p>
+
+    <p>
+        YOUR SCORE
+    </p>
+    <button class="reset-but" onclick="
+        score.wins=0
+        score.losses=0
+        score.ties=0
+        localStorage.removeItem('SCORE');
+        alert('SCORE RESET');
+        updateScore();
+    ">
+        RESET SCORE
+    </button>
+
+    <p>GO BACK</p>
+    <button onclick="window.location.href='http://127.0.0.1:5500/Practice/DOM-Project.html'">
+        <----
+    </button>
+    
+
+    <script src="Scripts/10-rps.js">
+    </script>
+  </body>
+</html>
