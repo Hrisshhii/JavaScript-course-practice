@@ -64,6 +64,11 @@ class Clothing extends Product{
 // logThis();
 // logThis.call('hello');
 
+/*
+1. Inside a method, "this" points to the outer object
+2. Inside a function, "this"=undefined but we can change it using call/apply/bind
+3. Arrow functions do not have their own "this", they use the "this" from the surrounding context
+*/
 
 export const products = [
   {
