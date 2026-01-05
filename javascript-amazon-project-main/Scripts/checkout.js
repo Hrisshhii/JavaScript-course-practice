@@ -5,6 +5,30 @@ import { loadCart } from '../data/cart.js';
 //import '../data/cart-class.js';
 //import '../data/backend-practice.js';
 
+
+
+/*
+Async Await:
+- creates a way to work with promises
+- makes asynchronous code look and behave like synchronous code
+- await lets us wait for a promise to resolve before moving to next line of code
+- closest function has to be async for await to work
+*/
+//Async Await
+async function loadPage(){
+    await loadProductsfetch();
+    const value=await new Promise((resolve)=>{
+        loadCart(()=>{
+            resolve('value2');
+        });
+    });
+    renderOrderSummary();
+    renderPaymentSummary();
+}
+loadPage();
+
+
+
 /* 
 Promises:
 - better way to handle asynchronous operations in JavaScript
@@ -17,6 +41,8 @@ Promises:
 
 // resolve is a function similar to done() in Jasmine, lets us control when to go to next step
 
+
+/*
 Promise.all([
     loadProductsfetch(),
     new Promise((resolve)=>{
@@ -29,6 +55,9 @@ Promise.all([
     renderOrderSummary();
     renderPaymentSummary();
 });
+*/
+
+
 
 // single promise example
 /*
