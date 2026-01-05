@@ -16,12 +16,22 @@ Async Await:
 */
 //Async Await
 async function loadPage(){
-    await loadProductsfetch();
-    const value=await new Promise((resolve)=>{
-        loadCart(()=>{
-            resolve('value2');
+    try{
+        //throw for user-defined errors
+        //throw new Error('error loading products');
+        //throw 'error loading products';
+        await loadProductsfetch();
+        const value=await new Promise((resolve)=>{
+            loadCart(()=>{
+                //throw does not work here, use reject instead
+                //reject('error loading cart');
+                resolve('value2');
+            });
         });
-    });
+    }catch(error){
+        console.error('Error loading page data:', error);
+    }
+    
     renderOrderSummary();
     renderPaymentSummary();
 }
